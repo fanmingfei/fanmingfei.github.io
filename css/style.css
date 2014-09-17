@@ -1,0 +1,82 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}:focus{outline:0}h1,h2,h3,h4,h5,h6{font-weight:normal}.clearfix:before,.section:before,.nav ul:before{content:"";display:table}.clearfix:after,.section:after,.nav ul:after{content:"";display:table;clear:both}input{-webkit-appearance:none;border-radius:0}a{color:#2094c4;text-decoration:none;outline:none}a:hover{color:#3498db}p{padding:0 0 20px}strong{font-weight:bold}body{color:#000;font:normal 14px/1.4 "helvetica neue",tahoma,"hiragino sans gb",stheiti,"wenquanyi micro hei",\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;width:100%;overflow:hidden}.left{float:left}.right{float:right}
+.background{
+position: absolute;
+top: 0;
+left: 0;
+bottom:0;
+right:0;
+z-index: -10;
+background-position: center 0;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+-webkit-background-size: cover;
+-o-background-size: cover;
+zoom: 1;
+background:url(../images/bg.jpg);
+}
+img.myPic {
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    position: absolute;
+    margin-left: -50px;
+    top: 10px;
+    border-radius: 50%;
+    border: 5px solid #FCFCFC;
+	opacity: 0.7;
+}
+nav.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.nav .fade {
+    background: #ccc;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+	font-weight:bold;
+}
+.nav .fade1 {
+    margin-left: -200px;  
+    top: 26px;
+    background: #8F8F8F;
+    border: 3px solid #CFCFCF;
+}
+.nav .fade2 {
+    margin-left: -121px;  
+    top: 155px;
+    background: #8F8F8F;  border: 3px solid #CFCFCF;
+}
+.nav .fade3 {
+    margin-left: 62px;  
+    top: 155px;
+    background: #8F8F8F;  border: 3px solid #CFCFCF;
+}
+.nav .fade4 {
+    margin-left: 135px;  
+    top: 26px; 
+    background: #8F8F8F;  border: 3px solid #CFCFCF;
+}
+.nav .fade a {
+    display: block;
+    line-height: 80px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+}
+section {
+    width: 780px;
+    margin: 0 auto;
+    text-align: center;
+}
+.section-firstpage {
+    margin-top: 268px;
+}
+.section-firstpage p {
+    font-size: 33px;  color: #fff;
+}
