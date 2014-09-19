@@ -65,6 +65,7 @@ global.navChangePage=function(){
 	}else{
 		global.outFade(1,4);
 	}
+	global.twoPage();
 }
 //离开首页后nav效果
 
@@ -120,6 +121,35 @@ $('.fade').click(function(){
 })
 }
 global.bindClick();
+//到第二页事件
+global.twoPage=function(){
+	var section=$('.section');
+	if(parseInt($(section[1]).css('top'))==0){
+		global.firstDown(5,8);
+	}
+}
+//鼠标移入works item的时候
+$('.work-item').on('mouseover',function(){
+	$(this).children('img').addClass('action');
+	$(this).children('.work-info').addClass('action');
+});
+$('.work-item').on('mouseout',function(){
+	$(this).children('img').removeClass('action');
+	$(this).children('.work-info').removeClass('action');
+});
+//监控按键输入
+$(window).keydown(function(event){
+	switch(event.keyCode){
+		case 38:
+			global.prevPage();
+			break;
+		case 40:
+			global.nextPage();
+			break;
+		default:
+			break;
+	}
+})
 //当屏幕变化时
 $(window).resize(function(){
 global.pageMax();
