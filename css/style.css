@@ -285,6 +285,7 @@ background:#B5CC3B;
 	width:400px;
 	height:400px;
 	position:relative;
+	margin: 73px;
 }
 .section.works {
     background: #4BA24E;
@@ -384,4 +385,8 @@ background: #9C6F3E;
 }
 .connect-right {
 margin-left: 119px;
+}
+.pic {
+    width: 343px;
+    margin-right: 60px;
 }
