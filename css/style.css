@@ -1,4 +1,4 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}:focus{outline:0}h1,h2,h3,h4,h5,h6{font-weight:normal}.clearfix:before,.section:before,.nav ul:before{content:"";display:table}.clearfix:after,.section:after,.nav ul:after{content:"";display:table;clear:both}input{-webkit-appearance:none;border-radius:0}a{color:#2094c4;text-decoration:none;outline:none}a:hover{color:#3498db}p{padding:0 0 20px}strong{font-weight:bold}body{color:#000;font:normal 14px/1.4 "helvetica neue",tahoma,"hiragino sans gb",stheiti,"wenquanyi micro hei",\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;width:100%;overflow:hidden}.left{float:left}.right{float:right}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}:focus{outline:0}h1,h2,h3,h4,h5,h6{font-weight:normal}.clearfix:before,.section:before,.nav ul:before{content:"";display:table}.clearfix:after,.section:after,.nav ul:after{content:"";display:table;clear:both}input{-webkit-appearance:none;border-radius:0}a{color:#2094c4;text-decoration:none;outline:none;cursor:pointer;}a:hover{color:#3498db}p{padding:0 0 20px}strong{font-weight:bold}body{color:#000;font:normal 14px/1.4 "helvetica neue",tahoma,"hiragino sans gb",stheiti,"wenquanyi micro hei",\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;width:100%;overflow:hidden}.left{float:left}.right{float:right}
 .background{
 position: absolute;
 top: 0;
@@ -32,6 +32,7 @@ nav.nav {
     top: 0;
     left: 0;
     right: 0;
+	z-index:1000;
 }
 .nav .fade {
     background: #ccc;
@@ -59,6 +60,9 @@ nav.nav {
     margin-left: -200px;
 	opacity:1;
 }
+.nav .fade1-normal{
+	margin-left: -320px;
+}
 .nav .fade2 {
     background: #8F8F8F;  border: 3px solid #CFCFCF;
 }
@@ -66,6 +70,10 @@ nav.nav {
     margin-left: -121px;  
     top: 155px;
 	opacity:1;
+}
+.nav .fade2-normal{
+	margin-left: -184px;
+	top: 26px;
 }
 .nav .fade3 {
     background: #8F8F8F;  border: 3px solid #CFCFCF;
@@ -75,6 +83,10 @@ nav.nav {
     top: 155px;
 	opacity:1;
 }
+.nav .fade3-normal{
+	margin-left: 107px;
+	top: 26px;
+}
 .nav .fade4 {
     background: #8F8F8F;  border: 3px solid #CFCFCF;
 }
@@ -82,6 +94,10 @@ nav.nav {
     margin-left: 125px;  
     top: 26px; 
 	opacity:1;
+}
+.nav .fade4-normal{
+	margin-left: 244px;
+	top: 26px; 
 }
 .nav .fade a {
     display: block;
@@ -150,4 +166,27 @@ section {
 	top:258px;
 	-webkit-transform:rotateX(0deg);
 	opacity:1;
+}
+.section{
+	position:absolute;
+	overflow:hidden;
+}
+.bg-down-arrow{
+position:absolute;
+width: 58px;
+height: 52px;
+background: #fff;
+bottom: -25px;
+border-radius: 50%;
+background: #fff url(../images/bg-down-arrow.png) no-repeat 49% 30%;
+}
+.section-normal {
+    margin: 0 auto;
+    width: 780px;
+    margin-top: 140px;
+}
+.about p {
+    font-size: 25px;
+    padding: 0;
+    position: absolute;
 }
