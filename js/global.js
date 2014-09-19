@@ -1,7 +1,15 @@
 (function($){
 var global={
 	changePageIng:false,
+	navColor:[],
 };
+global.getNavColor=function(){
+	var section=$('.section');
+	for(var i=0;i<section.length;i++){
+		global.navColor[i]=$(section[i]).css('background-color');
+	}
+}
+global.getNavColor();
 //首页简介翻转显示效果
 global.firstDown= function(frnum,lsnum){
 		var i=frnum;
@@ -58,14 +66,11 @@ global.outFade=function(frnum,lsnum){
 			i++;
 		},80);
 }
-global.navChangePage=function(){
-	var section=$('.section');
-	if(parseInt(parseInt($(section[0]).css('top')))==0){
-		global.backFade(1,4);
-	}else{
-		global.outFade(1,4);
-	}
+global.changePage=function(){
+	global.onePage();
 	global.twoPage();
+	global.threePage();
+	global.navChangeColor();
 }
 //离开首页后nav效果
 
@@ -89,7 +94,7 @@ global.nextPage=function(){
 			return;
 	}
 	global.changePageIng=true;
-	$('.section').animate({top:'-='+$(window).height()+'px'},function(){global.changePageIng=false;global.navChangePage();});
+	$('.section').animate({top:'-='+$(window).height()+'px'},function(){global.changePageIng=false;global.changePage();});
 	
 }
 //滑动到上一页
@@ -102,7 +107,7 @@ global.prevPage=function(){
 		return;
 	}
 	global.changePageIng=true;
-	$('.section').animate({top:'+='+$(window).height()+'px'},function(){global.changePageIng=false;global.navChangePage();});
+	$('.section').animate({top:'+='+$(window).height()+'px'},function(){global.changePageIng=false;global.changePage();});
 	
 }
 //滑动到指定页面
@@ -112,7 +117,7 @@ global.toPage=function(page){
 	}
 	var section=$('.section');
 	pageTop=parseInt($(section[page-1]).css('top'));
-	$('.section').animate({top:'-='+pageTop},function(){global.changePageIng=false;global.navChangePage();});
+	$('.section').animate({top:'-='+pageTop},function(){global.changePageIng=false;global.changePage();});
 }
 //给导航按钮绑定点击事件
 global.bindClick=function(){
@@ -121,6 +126,16 @@ $('.fade').click(function(){
 })
 }
 global.bindClick();
+
+//到第一页事件
+global.onePage=function(){
+	var section=$('.section');
+	if(parseInt(parseInt($(section[0]).css('top')))==0){
+		global.backFade(1,4);
+	}else{
+		global.outFade(1,4);
+	}
+}
 //到第二页事件
 global.twoPage=function(){
 	var section=$('.section');
@@ -128,6 +143,22 @@ global.twoPage=function(){
 		global.firstDown(5,8);
 	}
 }
+//到第三页事件
+global.threePage=function(){
+	var section=$('.section');
+	if(parseInt($(section[2]).css('top'))==0){
+		var work=$('.work-item');
+		var i=0;
+		setInterval(function(){$(work[i]).addClass('action');i++},100);
+		
+	}
+}
+global.navChangeColor=function(){
+	var page=$('.section[style*="top: 0px"]').index();
+	var fade=$('.fade');
+	$(fade[page-2]).css('background',global.navColor[page-1]);
+}
+
 //鼠标移入works item的时候
 $('.work-item').on('mouseover',function(){
 	$(this).children('img').addClass('action');

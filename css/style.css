@@ -200,7 +200,7 @@ background: #fff url(../images/bg-down-arrow.png) no-repeat 49% 30%;
 }
 .section-normal {
     margin: 0 auto;
-    width: 780px;
+    width: 960px;
     margin-top: 140px;
 }
 .about p {
@@ -278,6 +278,9 @@ top:132px;
 	opacity:1;
 	
 }
+.about{
+background:#B5CC3B;
+}
 .about-left{
 	width:400px;
 	height:400px;
@@ -287,34 +290,52 @@ top:132px;
     background: #4BA24E;
 }
 .work-item.first{
-margin-left:0;
+	margin-left:0;
 }
 .work-item {
-float: left;
-width: 245px;
-overflow: hidden;
-margin-left: 22px;
-position: relative;
-height: 150px;
-margin-bottom:20px;
+	float: left;
+	width: 300px;
+	overflow: hidden;
+	margin-left: 22px;
+	position: relative;
+	height: 190px;
+	margin-bottom:20px;
+	
+	opacity:0;
+	transition:opacity 1s;
+	-o-transition:opacity 1s;
+	-moz-transition:opacity 1s;
+	-webkit-transition:opacity 1s;
+}
+.work-item.action{
+	opacity:1;
 }
 .work-info {
     position: absolute;
-    top: 109px;
+    top: 150px;
     background: rgba(0, 0, 0, 0.66);
     width: 100%;
-    height: 150px;
+    height: 100%;
     color: #fff;
 	
 	transition:top 1s;
+	-o-transition:top 1s;
+	-moz-transition:top 1s;
+	-webkit-transition:top 1s;
 }
-.work-item img{
+.work-item img{	
 	transition:transform 1s;
+	-o-transition:transform 1s;
+	-moz-transition:transform 1s;
+	-webkit-transition:transform 1s;
 	width:100%;
 	height:100%;
 }
 .work-item img.action{
 transform:scale(1.5,1.5);
+-moz-transform:scale(1.5,1.5);
+-o-transform:scale(1.5,1.5);
+-webkit-transform:scale(1.5,1.5);
 }
 .work-info.action{
 	top:0;
@@ -325,7 +346,42 @@ transform:scale(1.5,1.5);
     padding: 6px 10px;
 }
 .work-info p {
-    padding: 10px;
+    padding: 5px 10px;
     text-align: left;
     text-indent: 29px;
+}
+.skill p {
+    text-align: left;
+    font-size: 19px;
+    line-height: 26px;
+    color: #fff;
+}
+.skill {
+    background: #5579C3;
+}
+.connect{
+    line-height: 30px;
+    text-align: left;
+    font-size: 16px;
+    color: #F8F8F8;
+background: #9C6F3E;
+}
+.connect-left {
+    width: 258px;
+}
+.connect-left a {
+    color: #fff;
+}
+.connect h2 {
+    margin-bottom: 12px;
+	font-size:30px;
+	margin-top:30px;
+}
+.connect-left .ps {
+    font-size: 13px;
+    text-indent: 27px;
+	padding-bottom:10px;
+}
+.connect-right {
+margin-left: 119px;
 }
