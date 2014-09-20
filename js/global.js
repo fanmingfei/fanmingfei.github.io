@@ -198,5 +198,30 @@ $(document).on('mousewheel DOMMouseScroll', function(e){
 	}
 });
 
+var startY;
+function touchStart(event) {
+         event.preventDefault();
+         if (!event.touches.length) return;
+         var touch = event.touches[0];
+         startY = touch.pageY;
+}
+
+// add touch start listener
+window.addEventListener("touchstart", touchStart, false);
+
+function touchMove(event) {
+    event.preventDefault();
+	if (!event.touches.length) return;
+	var touch=event.touches[0];
+	move=touch.pageY-startY;
+	if(move>0){
+		global.prevPage();
+		
+	}else if(move<0){
+		global.nextPage();
+	}
+}
+
+window.addEventListener("touchmove", touchMove, false);
 
 })(jQuery);
