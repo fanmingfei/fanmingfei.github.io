@@ -124,7 +124,11 @@ global.bindClick=function(){
 $('.fade').click(function(){
 	global.toPage($(this).index()+2);
 })
+$('.myPic').click(function(){
+	global.toPage(1);
+})
 }
+
 global.bindClick();
 
 //到第一页事件
@@ -199,6 +203,7 @@ $(document).on('mousewheel DOMMouseScroll', function(e){
 });
 
 var startY;
+var move;
 function touchStart(event) {
          event.preventDefault();
          if (!event.touches.length) return;
@@ -214,6 +219,12 @@ function touchMove(event) {
 	if (!event.touches.length) return;
 	var touch=event.touches[0];
 	move=touch.pageY-startY;
+
+}
+
+window.addEventListener("touchmove", touchMove, false);
+function touchEnd(){
+    event.preventDefault();
 	if(move>0){
 		global.prevPage();
 		
@@ -222,6 +233,6 @@ function touchMove(event) {
 	}
 }
 
-window.addEventListener("touchmove", touchMove, false);
+window.addEventListener("touchend", touchEnd, false);
 
 })(jQuery);

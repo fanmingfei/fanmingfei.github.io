@@ -26,6 +26,7 @@ img.myPic {
     border: 5px solid #FCFCFC;
 	opacity: 0.7;
 	z-index:100;
+	cursor:pointer;
 }
 nav.nav {
     position: fixed;
