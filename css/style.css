@@ -200,6 +200,7 @@ height: 52px;
 background: #fff;
 bottom: -25px;
 border-radius: 50%;
+display:block;
 background: #fff url(../images/bg-down-arrow.png) no-repeat 49% 30%;
 }
 .section-normal {
