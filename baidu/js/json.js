@@ -13,6 +13,10 @@ $(function(){
 			 dataType:"jsonp",
 			 jsonp:"callback",
 			 success:function(data){
+				if(data.errno!=0){
+					$('.i_list').empty().append('数据获取失败！');
+					return;
+				}
 			 //将获取的数据分页
 				var datas=data.list;
 				var page=0;

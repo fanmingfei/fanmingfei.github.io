@@ -1,84 +1,83 @@
 /* @group general styles
 ------------------------------------------------------------------------------------*/
-.clearfix:before,.clearfix:after {display: table; content: " "; }
-.clearfix:after {clear: both; }
-.wrap {width:960px; margin:0 auto}
+.clearfix:before,.clearfix:after {display: table; content: " ";}
+.clearfix:after {clear: both;}
+.wrap {width:960px; margin:0 auto;}
 .ui {background-image:url(../images/ui.png);}
 .content {background-color:#ededf0; padding-bottom: 50px;}
 .fl{float:left;}
 .fr{float:right;}
-.talk{ display: inline-block; width: 17px; height: 14px; background-position: 0px -65px; vertical-align: middle; margin-right: 3px;
-}
-.like { display: inline-block; width: 14px; height: 12px; background-position: 0px -80px; vertical-align: middle; margin-right: 3px;
-}
-.share { display: inline-block; width: 15px; height: 14px; background-position: 0px -92px; vertical-align: middle; margin-right: 3px;
-}
+.talk{display: inline-block; width: 17px; height: 14px; background-position: 0px -65px; vertical-align: middle; margin-right: 3px;}
+.like {display: inline-block; width: 14px; height: 12px; background-position: 0px -80px; vertical-align: middle; margin-right: 3px;}
+.share {display: inline-block; width: 15px; height: 14px; background-position: 0px -92px; vertical-align: middle; margin-right: 3px;}
 /* @group header styles
 ------------------------------------------------------------------------------------*/
-.header {background: url(../images/header-bg.png) #505050; height: 64px; }
-	.logo {width:109px; height:28px; background:url(../images/logo.png); margin: 18px 0 0 18px; float:left; display:block}
-	.h_nav {width:280px; float:right; }
-		.h_nav li {float: left; width: 70px; line-height: 64px; text-align: center; }
-			.h_nav a {color: #fff; display: block; width: 70px; font-weight:bold; }
-			.h_nav a:hover {color:#368df9; background:rgba(255, 255, 255, 0.08)}
-			.h_nav .hover {color:#368df9; background:rgba(255, 255, 255, 0.08)}
+.header {background: url(../images/header-bg.png) #505050; height: 64px;}
+	.logo {width:109px; height:28px; background:url(../images/logo.png); margin: 18px 0 0 18px; float:left; display:block;}
+	.h_nav {width:280px; float:right;}
+		.h_nav li {float: left; width: 70px; line-height: 64px; text-align: center;}
+			.h_nav a {color: #fff; display: block; width: 70px; font-weight:bold;}
+			.h_nav a:hover {color:#368df9; background:rgba(255, 255, 255, 0.08);}
+			.h_nav .hover {color:#368df9; background:rgba(255, 255, 255, 0.08);}
 
 /* @group banner styles
 ------------------------------------------------------------------------------------*/
-.banner {width:100%; height:420px; position:relative; overflow:hidden}
-	.banner a {display:block; }
-	.Box {position:absolute; width:100%}
-		.case {width:100%; height: 420px; float:left; background-size:cover; }
-			.case a {width:100%; height:100%; }
-		.prevpage {width: 24px; height: 96px; display:block; position: absolute; top: 50%; z-index: 100; background: rgba(0, 0, 0, 0.61); margin-top:-58px}
-		.nextpage {width: 24px;  height: 96px;  display: block;  position: absolute;  top: 50%;  right: 0;  z-index: 100;  background: rgba(0, 0, 0, 0.61); margin-top:-58px}
-		.prev, .next {width: 11px; height: 19px; display: block; position: absolute; top: 50%; margin-top: -9px; left: 50%; margin-left: -6px; display:block; }
-			.prev.ui {background-position: 0 -123px; }
-			.next.ui {background-position: 0 -105px; }
+.banner {width:100%; height:420px; position:relative; overflow:hidden;}
+	.banner a {display:block;}
+	.Box {position:absolute; width:100%;}
+		.case {width:100%; height: 420px; float:left; background-size:cover;}
+			.case a {width:100%; height:100%;}
+		.prevpage {width: 24px; height: 96px; display:block; position: absolute; top: 50%; z-index: 100; background: rgba(0, 0, 0, 0.61); margin-top:-58px;}
+		.nextpage {width: 24px;  height: 96px;  display: block;  position: absolute;  top: 50%;  right: 0;  z-index: 100;  background: rgba(0, 0, 0, 0.61); margin-top:-58px;}
+		.prev, .next {width: 11px; height: 19px; display: block; position: absolute; top: 50%; margin-top: -9px; left: 50%; margin-left: -6px; display:block;}
+			.prev.ui {background-position: 0 -123px;}
+			.next.ui {background-position: 0 -105px;}
 
 /* @group item styles
 ------------------------------------------------------------------------------------*/
-.i_nav {height: 64px; overflow: hidden; }
-	.i_nav li {float: left; }
+.i_nav {height: 64px; overflow: hidden;}
+	.i_nav li {float: left;}
 		.i_nav a {line-height: 64px; color: #000; font-size: 14px;  text-decoration: none; font-weight: bold; padding: 0 30px; 
-		}
-		.i_nav a:first-child {padding-left:0}
-		.i_nav a:hover {color:rgb(106,167,245)}
-		.i_nav .hover {color:rgb(106,167,245)}
+		;}
+		.i_nav a:first-child {padding-left:0;}
+		.i_nav a:hover {color:rgb(106,167,245);}
+		.i_nav .hover {color:rgb(106,167,245);}
 .i_list {width: 100%;}
 .i_list li {float: left; width: 308px; background-color: #fff;margin: 18px 18px 0 0;}
-	.i_list li:nth-child(3n){margin-right:0}
+	.i_list li:nth-child(3n){margin-right:0;}
 	.i_img {width: 100%; height: 170px;}
 	.i_a {display: block;}
 	.i_title {display: block; line-height: 28px; font-weight: bold; font-size: 16px;padding: 0 10px;margin-top: 5px;overflow: hidden;height: 28px;text-overflow: ellipsis;white-space: nowrap;}
 .i_info {margin: 5px 0 10px;padding: 0 10px;}
-	.i_opt { margin-top: 7px; max-width: 163px;}
-		.i_opt a {display: inline-block;color: #ccc;margin-left: 4px;max-width: 52px;overflow: hidden;height: 18px;}	
+	.i_opt {margin-top: 7px; max-width: 163px;}
+		.i_opt a {display: inline-block;color: #ccc;margin-left: 4px;max-width: 52px;overflow: hidden;height: 18px;font-size: 14px;}	
 		.i_opt span { max-width: 32px; overflow: hidden; display: inline-block; vertical-align: top;}
-	.i_user { display: inline-block; vertical-align: middle;}
+	.i_user {display: inline-block; vertical-align: middle;}
 		.i_user span { display: inline-block; vertical-align: top; line-height: 30px;color: #ccc; max-width: 94px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; margin-left: 5px;}
 		.i_user img { margin-top: 3px;}
-.i_footer { width: 294px; margin: 22px auto 0 auto}
-	.i_prev { display: block; width: 32px; height: 32px;}
-	.i_next { display: block;  width: 32px;  height: 32px; background-position: 0 -32px;}
-	.i_page { overflow: hidden; margin: 8px 0 0 49px;}
-		.i_page li { float: left; font-size: 14px; margin-right: 15px;}
-		.i_page a { color: #929292;}
+.i_footer {width: 294px; margin: 22px auto 0 auto;}
+	.i_prev {display: block; width: 32px; height: 32px;}
+	.i_next {display: block;  width: 32px;  height: 32px; background-position: 0 -32px;}
+	.i_page {overflow: hidden; margin: 8px 0 0 49px;}
+		.i_page li {float: left; font-size: 14px; margin-right: 15px;}
+		.i_page a {color: #929292;}
 		
 .footer {text-align: center; padding: 32px; background-color: #ededf0; border-top: 2px solid #ADADAD; font-size: 14px; color: #929292;}
+
 @media only screen and (min-width: 760px) and (max-width: 1023px) {
-.banner {height:355px}
-.case {height:355px}
-.wrap{width:100%}
-.i_list li{width:32%;margin-right:2%}
-}	
+.banner {height:355px;}
+.case {height:355px;}
+.wrap{width:100%;}
+.i_list li{width:32%;margin-right:2%;}
+}
+
 @media only screen and (max-width: 760px) {
-.wrap{width:100%}
+.wrap{width:100%;}
 .logo {clear: both; float: none; margin: 18px auto;}
 .header { height: inherit;}
 .h_nav { clear: both; float: none; margin: 0 auto;}
 .i_nav {margin-left: 14px;}
 .i_list li {width: 46%; margin-right: 2%;margin-left: 2%;}
-.i_list li:nth-child(3n){margin-right:2%}
+.i_list li:nth-child(3n){margin-right:2%;}
 .i_img{height:150px;}
 }

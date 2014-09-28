@@ -1,12 +1,11 @@
 $(function(){
 	Slide={
-		num:set.num,			//图片数
-		time:set.time,			//自动轮播时间间隔
-		imgSrc:set.img,			//存放图片的数组
+		num:4,			//图片数
+		time:2000,			//自动轮播时间间隔
+		imgSrc:['./images/banner1.jpg','./images/banner2.jpg','./images/banner3.jpg','./images/banner4.jpg'],//存放图片的数组
 		text:null,				//用来存放添加到dom的字符串
 		canSlide:true,			//是否能够轮播，防止多次轮播
 		CaseWidth:'100%',		//盒子宽度，不需要修改
-		CaseLength:set.num+1,	//轮播个数，为实现连续滚动而设置，不需要修改
 		thisImg:0
 	}
 		/*
@@ -19,10 +18,10 @@ $(function(){
 			$(Slide.text).appendTo('.Box');			//将整理好的字符串变成对象写入DOM
 			var img=$('.case');						//获取轮播单位
 			$(img[0]).clone(true).appendTo('.Box');	//将第一个单位复制并放到最后，为了实现连续轮播
-			var BoxWidth=Slide.CaseLength*100+'%';	//计算存放图片的盒子宽度
+			var BoxWidth=(Slide.num+1)*100+'%';	//计算存放图片的盒子宽度
 			$('.Box').css('width',BoxWidth);		//设置存放图片的盒子宽度
 			$('.Box').css('left','0');				//设置存放图片盒子的left，以便使用jquery对其进行检测与操作
-			var CaseWidth2=100/Slide.CaseLength+'%';//计算轮播单位的宽度
+			var CaseWidth2=100/(Slide.num+1)+'%';//计算轮播单位的宽度
 			$('.case').css('width',CaseWidth2);		//设置轮播单位的宽度
 		};
 		/*
@@ -30,7 +29,7 @@ $(function(){
 		 */
 		Slide.next=function(){
 			if(Slide.canSlide==true){					//判断是否可以执行轮播
-				if(Slide.thisImg==Slide.CaseLength-1) {	//判断是否是最后一个轮播单位，如果是变为第一个轮播单位
+				if(Slide.thisImg==Slide.num) {	//判断是否是最后一个轮播单位，如果是变为第一个轮播单位
 					$('.Box').css('left','0');
 					Slide.thisImg=0;
 				}
@@ -64,7 +63,7 @@ $(function(){
 		Slide.run=function(){
 			return setInterval(function(){
 				if(Slide.canSlide==true){					//判断是否可以执行轮播
-					if(Slide.thisImg==Slide.CaseLength-1) { //判断是否是最后一个轮播单位，如果是变为第一个轮播单位
+					if(Slide.thisImg==Slide.num) { //判断是否是最后一个轮播单位，如果是变为第一个轮播单位
 						$('.Box').css('left','0');
 						Slide.thisImg=0;
 					}
