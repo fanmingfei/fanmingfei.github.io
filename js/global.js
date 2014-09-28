@@ -24,7 +24,7 @@ global.firstDown= function(frnum,lsnum){
 		},800);
 }
 global.firstDown(2,4);
-
+ 
 //首页 nav 出现效果
 global.navFade=function(frnum,lsnum){
 		var i=frnum;
