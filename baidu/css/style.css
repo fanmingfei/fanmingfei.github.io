@@ -74,11 +74,12 @@ body, button, input, select, textarea {font: 12px/1.5 tahoma,arial,"宋体";colo
 
 @media only screen and (max-width: 760px) {
 .wrap{width:100%;}
-.logo {clear: both; float: none; margin: 18px auto;}
+.logo {clear: both; float: none; margin: 10px auto;}
 .header { height: inherit;}
 .banner{height:160px;}
 .case{height: 160px;}
-.h_nav { clear: both; float: none; margin: 0 auto;}
+.h_nav {clear: both; float: none; margin: 0 auto;}
+.h_nav li {line-height: 35px;}
 .i_nav {margin-left: 14px;}
 .i_list li {width: 46%; margin-right: 2%;margin-left: 2%;}
 .i_list li:nth-child(3n){margin-right:2%;}
