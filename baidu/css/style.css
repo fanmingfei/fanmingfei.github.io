@@ -55,7 +55,7 @@ body, button, input, select, textarea {font: 12px/1.5 tahoma,arial,"宋体";colo
 		.i_opt span { max-width: 32px; overflow: hidden; display: inline-block; vertical-align: top;}
 	.i_user {display: inline-block; vertical-align: middle;}
 		.i_user span { display: inline-block; vertical-align: top; line-height: 30px;color: #ccc; max-width: 94px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; margin-left: 5px;}
-		.i_user img { margin-top: 3px;}
+		.i_user img { margin-top: 3px; border-radius: 50%;}
 .i_footer {width: 294px; margin: 22px auto 0 auto;}
 	.i_prev {display: block; width: 32px; height: 32px;}
 	.i_next {display: block;  width: 32px;  height: 32px; background-position: 0 -32px;}
