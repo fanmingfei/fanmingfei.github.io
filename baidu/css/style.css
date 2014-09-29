@@ -1,5 +1,6 @@
 /* @group general styles
 ------------------------------------------------------------------------------------*/
+body, button, input, select, textarea {font: 12px/1.5 tahoma,arial,"宋体";color: #666;}
 .clearfix:before,.clearfix:after {display: table; content: " ";}
 .clearfix:after {clear: both;}
 .wrap {width:960px; margin:0 auto;}
@@ -65,8 +66,8 @@
 .footer {text-align: center; padding: 32px; background-color: #ededf0; border-top: 2px solid #ADADAD; font-size: 14px; color: #929292;}
 
 @media only screen and (min-width: 760px) and (max-width: 1023px) {
-.banner {height:355px;}
-.case {height:355px;}
+.banner{height:280px;}
+.case{height: 280px;}
 .wrap{width:100%;}
 .i_list li{width:32%;margin-right:2%;}
 }
@@ -75,6 +76,8 @@
 .wrap{width:100%;}
 .logo {clear: both; float: none; margin: 18px auto;}
 .header { height: inherit;}
+.banner{height:160px;}
+.case{height: 160px;}
 .h_nav { clear: both; float: none; margin: 0 auto;}
 .i_nav {margin-left: 14px;}
 .i_list li {width: 46%; margin-right: 2%;margin-left: 2%;}
