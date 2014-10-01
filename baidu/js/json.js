@@ -4,8 +4,8 @@ $(function(){
 		allPage:0,	//全部页面
 	};
 	/*
-	 *	页面初始化
-	 * 	给json分页，并设置分页列表
+	 *	@param 页面初始化
+	 * 	       给json分页，并设置分页列表
 	 */
 	Json.start=function(){
 		$.ajax({
@@ -53,9 +53,9 @@ $(function(){
 		});
 	}
 	/*
-	 *	跳转到某页面
-	 *	@newdata 所需要的数据
-	 *	@page	 将要展示的页面Id
+	 *	@param 跳转到某页面
+	 *	@argument newdata 所需要的数据
+	 *	@argument page	 将要展示的页面Id
 	*/
 	Json.toPage=function(newdata,page){
 			pagenum=page;

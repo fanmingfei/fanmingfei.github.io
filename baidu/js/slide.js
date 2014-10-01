@@ -1,10 +1,11 @@
+/*
+ * jQuery - Slide v1.0
+ * Copyright(c) 2014 by 范明非-Edire
+ * Date: 2014-10-1
+ * For: Baidu Cloud
+ */
 (function($){
-	var canSlide=true,
-		thisImg=0,
-		tm,
-		n,
-		run,
-		ts;
+	var canSlide=true,thisImg=0,tm,n,run,ts;
 	$.fn.slideInit=function(num,imgSrc,time){
 		var text='',
 			x;
@@ -20,9 +21,9 @@
 		var CaseWidth2=100/(num+1)+'%';//计算轮播单位的宽度
 		$('.case').css('width',CaseWidth2);		//设置轮播单位的宽度
 		n=num;									//复制一个n的变量，以便以后用
-		tm=time;
+		tm=time;								//设置时间
 		ts=$(this);
-		run=ts.slideTimeRun();
+		run=ts.slideTimeRun();					//滚动开始
 	};
 	$.fn.slideNext=function(){
 		if(canSlide==true){					//判断是否可以执行轮播
