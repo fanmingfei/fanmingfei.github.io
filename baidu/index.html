@@ -45,8 +45,10 @@
 				</ul>
 			</section>
 			<footer class="i_footer clearfix">
-				<a href="javascript:;" class="i_prev ui fl"></a>
-				<a href="javascript:;" class="i_next ui fr"></a>
+				<nav>
+					<a href="javascript:;" class="i_prev ui fl"></a>
+					<a href="javascript:;" class="i_next ui fr"></a>
+				</nav>
 				<ul class="i_page clearfix">
 				</ul>
 			</footer>
@@ -59,5 +61,10 @@
 	<script src="./js/underscore-min.js"></script> 
 	<script src="./js/slide.js"></script>
 	<script src="./js/json.js"/></script>
+	<script>
+		$('.Box').slideInit(4,['./images/banner1.jpg','./images/banner2.jpg','./images/banner3.jpg','./images/banner4.jpg'],2000);
+		$('.prevpage').click(function(){$('.Box').slidePrev()});
+		$('.nextpage').click(function(){$('.Box').slideNext()});
+	</script>
 	</body>
 </html>
