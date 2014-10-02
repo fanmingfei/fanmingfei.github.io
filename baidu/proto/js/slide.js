@@ -9,7 +9,6 @@ function slide(num,imgSrc,time,cls){
 		for(x in imgSrc){				//将所有的图片写入字符串
 				text+='<li class="case" style="background-image:url('+imgSrc[x]+')"><a href=""></a></li>';
 			}
-		console.log(text);
 		this.cls.innerHTML=text;			//将整理好的字符串变成对象写入DOM
 			
 		this.img=this.cls.getElementsByClassName('case');//获取轮播单位			
@@ -35,7 +34,6 @@ function slide(num,imgSrc,time,cls){
 				var b=0;
 				var t=setInterval(function(){
 					b=b+5;
-					console.log(b);
 					clsLeft=clsLeft-5;
 					ts.cls.style.left=clsLeft+'%';
 					if(b==100){
