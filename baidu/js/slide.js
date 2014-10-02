@@ -44,7 +44,7 @@
 		if(canSlide==true){					//判断是否可以执行轮播
 				if(thisImg==0) {			//判断是否是最后一个轮播单位，如果是变为第一个轮播单位
 					$(this).css('left',-n*100+'%');
-					thisImg=4;
+					thisImg=n;
 				}
 				canSlide=false;					//准备轮播，禁止重复轮播事件发生
 				clearInterval(run);						//停止时间间隔事件，防止下次轮播提前

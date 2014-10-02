@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/> 
+		<title>百度云团队面试测试题</title>
+		<link href="./css/reset.css" rel="stylesheet" />
+		<link href="./css/style.css" rel="stylesheet" />
+		<link href="./css/ui.css" rel="stylesheet" />
+	</head>
+	<body>
+	<header class="header clearfix">
+		<div class="wrap clearfix">
+			<a class="logo" href="#"></a>
+			<nav class="h_nav">
+				<ul class="clearfix">
+					<li><a href="" class="hover">日志</a></li>
+					<li><a href="">招聘</a></li>
+					<li><a href="">关于</a></li>
+					<li><a href="">留言板</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<section class="banner outBox">
+		<ul class="Box clearfix">
+		</ul>
+		<nav>
+			<a class="prevpage" href="javascript:;"><span class="prev ui"></span></a>
+			<a class="nextpage" href="javascript:;"><span class="next ui"></span></a>
+		</nav>
+	</section>
+	<section class="content">
+		<div class="item wrap">
+			<nav class="i_nav">
+				<ul class="clearfix">
+					<li><a href="" class="hover">全部</a></li>
+					<li><a href="">视觉设计</a></li>
+					<li><a href="">交互设计</a></li>
+					<li><a href="">用户研究</a></li>
+				</ul>
+			</nav>
+			<section class="i_list">
+				<ul class="clearfix" id="i_list">
+				</ul>
+			</section>
+			<footer class="i_footer clearfix">
+				<nav>
+					<a href="javascript:;" class="i_prev ui fl"></a>
+					<a href="javascript:;" class="i_next ui fr"></a>
+				</nav>
+				<ul class="i_page clearfix">
+				</ul>
+			</footer>
+		</div>
+	</section>
+	<footer class="footer">
+		&copy 2010-2014 Baidu
+	</footer>
+	<script src="./js/slide.js"></script>
+	<script src="./js/json.js"/></script>
+	<script>
+	var slide=new slide(4,['./images/banner1.jpg','./images/banner2.jpg','./images/banner3.jpg','./images/banner4.jpg'],2000,'Box');
+	slide.slideInit();
+	document.getElementsByClassName('banner')[0].onclick=function(evt){
+		var evt=evt || window.event;
+		var link=evt.link || evt.srcElement;
+		if(link.className.indexOf('prevpage')>=0 || link.className.indexOf('prev')>=0){
+			slide.slidePrev();
+		}else if(link.className.indexOf('nextpage')>=0 || link.className.indexOf('next')>=0){
+			slide.slideNext();
+		}
+		
+	};
+	</script>
+	</body>
+</html>

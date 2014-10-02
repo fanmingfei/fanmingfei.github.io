@@ -30,6 +30,18 @@ $(function(){
 						newdata[page]=[];
 						j=0;
 					}
+					if(datas[u].count>=10000){
+						var count=datas[u].msgcount.toString();
+						datas[u].msgcount=count.substr(0,count.length-4)+'万';
+					}
+					if(datas[u].lovecount>=10000){
+						var count=datas[u].sharecount.toString();
+						datas[u].lovecount=count.substr(0,count.length-4)+'万';
+					}
+					if(datas[u].sharecount>=10000){
+						var count=datas[u].sharecount.toString();
+						datas[u].sharecount=count.substr(0,count.length-4)+'万';
+					}
 					newdata[page][j]=datas[u];
 					j++;
 				}
@@ -78,12 +90,16 @@ $(function(){
 					'<%});%> ';
 			$("#i_list").html( _.template(str, newdata[pagenum])); 
 			Json.thisPage=pagenum;
+			$($(".i_page li")).removeClass('thispage');
+			$($(".topage")[Json.thisPage]).addClass('thispage');	//设置当前页面页码的字体颜色
 	}
 	$(document).on('click','.topage',function(){	//跳页操作
 		Json.toPage(newdata,$(this).index());
 	});
 	$(document).on('click','.lastpage',function(){	//去最后一页操作
 		Json.toPage(newdata,Json.allPage-1);
+		$($(".i_page li")).removeClass('thispage');
+		$($(".lastpage")).addClass('thispage');	//设置当前页面页码的字体颜色
 	});
 	$('.i_prev').click(function(){					//上一页操作
 		if(Json.thisPage==0) return false;			//如果是第一页，操作停止
