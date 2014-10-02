@@ -24,6 +24,10 @@ function callback(data) {
 
 function Json(data){
 	this.start=function(){
+		if(data.errno!=0){
+			document.getElementsByClassName('i_list').innerHTML='数据获取失败！';
+			return;
+		}
 		var datas=data.list;
 		var page=0;
 		var j=0;
