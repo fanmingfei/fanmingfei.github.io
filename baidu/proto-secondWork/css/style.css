@@ -17,7 +17,7 @@ body, button, input, select, textarea {font: 12px/1.5 tahoma,arial,"宋体";colo
 	.logo {width:109px; height:28px; background:url(../images/logo.png); margin: 18px 0 0 18px; float:left; display:block;}
 	.h_nav {width:280px; float:right;}
 		.h_nav li {float: left; width: 70px; line-height: 64px; text-align: center;}
-			.h_nav a {color: #fff; display: block; width: 70px; font-weight:bold;}
+			.h_nav a {color: #fff; display: block; width: 70px; font-weight:bold;font-size: 14px;}
 			.h_nav a:hover {color:#368df9; background:rgba(255, 255, 255, 0.08);}
 			.h_nav .hover {color:#368df9; background:rgba(255, 255, 255, 0.08);}
 
