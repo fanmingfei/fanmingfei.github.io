@@ -5,8 +5,8 @@
 		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/> 
 		<title>百度云团队面试测试题</title>
 		<link href="./css/reset.css" rel="stylesheet" />
-		<link href="./css/style.css" rel="stylesheet" />
-		<link href="./css/ui.css" rel="stylesheet" />
+		<link href="./css/style.less" rel="stylesheet/less" />
+		<script src="./js/less.js"></script>
 	</head>
 	<body>
 	<header class="header clearfix">
@@ -23,11 +23,11 @@
 		</div>
 	</header>
 	<section class="banner outBox">
-		<ul class="Box clearfix">
+		<ul class="box clearfix" id="box">
 		</ul>
 		<nav>
-			<a class="prevpage" href="javascript:;"><span class="prev ui"></span></a>
-			<a class="nextpage" href="javascript:;"><span class="next ui"></span></a>
+			<a class="prevpage" id="prevpage" href="javascript:;"><span class="prev ui"></span></a>
+			<a class="nextpage" id="nextpage" href="javascript:;"><span class="next ui"></span></a>
 		</nav>
 	</section>
 	<section class="content">
@@ -62,9 +62,9 @@
 	<script src="./js/slide.js"></script>
 	<script src="./js/json.js"/></script>
 	<script>
-		$('.Box').slideInit(4,['./images/banner1.jpg','./images/banner2.jpg','./images/banner3.jpg','./images/banner4.jpg'],2000);
-		$('.prevpage').click(function(){$('.Box').slidePrev()});
-		$('.nextpage').click(function(){$('.Box').slideNext()});
+		$('#box').slideInit(['./images/banner1.jpg','./images/banner2.jpg','./images/banner3.jpg','./images/banner4.jpg'],2000);
+		$('#prevpage').click(function(){$('.box').slidePrev()});
+		$('#nextpage').click(function(){$('.box').slideNext()});
 	</script>
 	</body>
 </html>

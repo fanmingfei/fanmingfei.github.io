@@ -6,7 +6,7 @@
  */
 (function($){
 	var canSlide=true,thisImg=0,tm,n,run,ts;
-	$.fn.slideInit=function(num,imgSrc,time){
+	$.fn.slideInit=function(imgSrc,time){
 		var text='',
 			x;
 		for(x in imgSrc){				//将所有的图片写入字符串
@@ -15,13 +15,16 @@
 		$(text).appendTo(this);			//将整理好的字符串变成对象写入DOM
 		var img=$('.case');						//获取轮播单位
 		$(img[0]).clone(true).appendTo(this);	//将第一个单位复制并放到最后，为了实现连续轮播
-		var BoxWidth=(num+1)*100+'%';	//计算存放图片的盒子宽度
-		$(this).css('width',BoxWidth);		//设置存放图片的盒子宽度
+		var boxWidth=(imgSrc.length+1)*100+'%';	//计算存放图片的盒子宽度
+		$(this).css('width',boxWidth);		//设置存放图片的盒子宽度
 		$(this).css('left','0');				//设置存放图片盒子的left，以便使用jquery对其进行检测与操作
-		var CaseWidth2=100/(num+1)+'%';//计算轮播单位的宽度
-		$('.case').css('width',CaseWidth2);		//设置轮播单位的宽度
-		n=num;									//复制一个n的变量，以便以后用
-		tm=time;								//设置时间
+		var caseWidth2=100/(imgSrc.length+1)+'%';//计算轮播单位的宽度
+		$('.case').css('width',caseWidth2);		//设置轮播单位的宽度
+		n=imgSrc.length;						//复制一个n的变量，以便以后用
+		tm=5000;								//默认时间
+		if(time){
+			tm=time;								//设置时间	
+		}
 		ts=$(this);
 		run=ts.slideTimeRun();					//滚动开始
 	};

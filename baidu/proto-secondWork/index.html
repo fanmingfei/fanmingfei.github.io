@@ -6,7 +6,6 @@
 		<title>百度云团队面试测试题</title>
 		<link href="./css/reset.css" rel="stylesheet" />
 		<link href="./css/style.css" rel="stylesheet" />
-		<link href="./css/ui.css" rel="stylesheet" />
 	</head>
 	<body>
 	<header class="header clearfix">
@@ -23,7 +22,7 @@
 		</div>
 	</header>
 	<section class="banner outBox">
-		<ul class="Box clearfix">
+		<ul class="box clearfix" id="Box">
 		</ul>
 		<nav>
 			<a class="prevpage" href="javascript:;"><span class="prev ui"></span></a>
@@ -60,7 +59,7 @@
 	<script src="./js/slide.js"></script>
 	<script src="./js/json.js"/></script>
 	<script>
-	var slide=new slide(4,['./images/banner1.jpg','./images/banner2.jpg','./images/banner3.jpg','./images/banner4.jpg'],2000,'Box');
+	var slide=new Slide(['./images/banner1.jpg','./images/banner2.jpg','./images/banner3.jpg','./images/banner4.jpg'],'Box',2000);
 	slide.slideInit();
 	document.getElementsByClassName('banner')[0].onclick=function(evt){
 		var evt=evt || window.event;
