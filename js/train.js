@@ -1,7 +1,6 @@
 
 var watchArr = [];
 
-
 var $tip  = $('<div style="position: fixed; width: 100%;min-height: 100px; background: red; left: 0; bottom: 0; line-height: 2; font-size: 18px; color: #FFF;text-align: center; word-wrap: break-word;"></div>');
 
 $tip.appendTo('body')
